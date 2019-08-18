@@ -84,6 +84,18 @@ export const constantRoutes = [
     ]
   },
   {
+    path: '/npcs',
+    component: Layout,
+    children: [
+      {
+        path: 'index',
+        component: () => import('@/views/npcs/index'),
+        name: 'NPCs',
+        meta: { title: 'NPCs', icon: 'people', affix: true }
+      }
+    ]
+  },
+  {
     path: '/documentation',
     component: Layout,
     children: [
@@ -184,7 +196,7 @@ export const asyncRoutes = [
     ]
   },
 
-  /** when your routing map is too long, you can split it into small modules **/
+  //when your routing map is too long, you can split it into small modules
   componentsRouter,
   chartsRouter,
   nestedRouter,
@@ -272,7 +284,7 @@ export const asyncRoutes = [
       }
     ]
   },
-
+/*
   {
     path: '/excel',
     component: Layout,
@@ -381,7 +393,7 @@ export const asyncRoutes = [
         meta: { title: 'External Link', icon: 'link' }
       }
     ]
-  },
+  },*/
 
   // 404 page must be placed at the end !!!
   { path: '*', redirect: '/404', hidden: true }

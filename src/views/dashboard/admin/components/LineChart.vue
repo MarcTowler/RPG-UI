@@ -1,5 +1,5 @@
 <template>
-  <div :class="className" :style="{height:height,width:width}" />
+    <div :class="className" :style="{height:height,width:width}" />
 </template>
 
 <script>
@@ -90,10 +90,10 @@ export default {
           }
         },
         legend: {
-          data: ['expected', 'actual']
+          data: ['Points in Circulation', 'Points Used']
         },
         series: [{
-          name: 'expected', itemStyle: {
+          name: 'Points in Circulation', itemStyle: {
             normal: {
               color: '#FF005A',
               lineStyle: {
@@ -109,7 +109,7 @@ export default {
           animationEasing: 'cubicInOut'
         },
         {
-          name: 'actual',
+          name: 'Points Used',
           smooth: true,
           type: 'line',
           itemStyle: {
